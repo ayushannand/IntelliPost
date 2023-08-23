@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode Solution Poster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 100;
+      padding: 100;
+    }
+
+    .popup-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vh;
+      text-align: center;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    #postSolutionButton {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #postSolutionButton:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-container">
+    <img class="logo" src="images/icon128.png" alt="Extension Logo">
+    <button id="postSolutionButton">Post Solution</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
