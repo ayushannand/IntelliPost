@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "IntelliPost",
+  "name": "Your Extension Name",
   "version": "1.0",
-  "description": "description.........",
+  "description": "Your extension description",
   "permissions": ["activeTab"],
 
   "action": {
@@ -17,8 +17,15 @@
   "content_scripts": [
     {
       "matches": ["https://leetcode.com/problems/*"],
-      "js": ["./JS/main.js"],
+      "js": ["./js/main.js"],
       "run_at": "document_end"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["./functions/redirect.js"],
+      "matches": ["*://*/*"]
     }
   ],
 
