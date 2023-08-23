@@ -17,7 +17,7 @@
     "content_scripts": [
       {
         "matches": ["https://leetcode.com/problems/*"],
-        "js": ["content.js"]
+        "js": ["./JS/main.js"]
       }
     ],
     "icons": {
