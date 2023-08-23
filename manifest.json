@@ -1,30 +1,35 @@
 {
-    "manifest_version": 2,
-    "name": "LeetCode Solution Poster",
-    "version": "1.0",
-    "description": "An extension to automate posting solutions on LeetCode.",
-    "permissions": [
-      "activeTab"
-    ],
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-      }
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://leetcode.com/problems/*"],
-        "js": ["./JS/main.js"]
-      }
-    ],
-    "icons": {
+  "manifest_version": 3,
+  "name": "IntelliPost",
+  "version": "1.0",
+  "description": "description.........",
+  "permissions": ["activeTab"],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "images/icon16.png",
       "48": "images/icon48.png",
       "128": "images/icon128.png"
-    },
-    "permissions": ["storage", "activeTab"]
-  }
-  
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["./JS/main.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
