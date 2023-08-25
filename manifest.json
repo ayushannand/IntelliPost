@@ -3,8 +3,12 @@
   "name": "Your Extension Name",
   "version": "1.0",
   "description": "Your extension description",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab","storage","tabs"],
 
+  "background": {
+    "service_worker" : "background.js"
+  },
+  
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -18,13 +22,14 @@
     {
       "matches": ["https://leetcode.com/problems/*"],
       "js": ["./js/main.js"],
+      "type": "module",
       "run_at": "document_end"
     }
   ],
 
   "web_accessible_resources": [
     {
-      "resources": ["./functions/redirect.js"],
+      "resources": ["./functions/redirect.js","./functions/hello.mjs"],
       "matches": ["*://*/*"]
     }
   ],
@@ -33,10 +38,5 @@
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
-  },
-
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+  }
 }
